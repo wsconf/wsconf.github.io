@@ -9,17 +9,21 @@
 	<link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">
 	<style>
 	* {margin:0; padding:0; line-height:1;}
-	html, body {width:100%;	height:100%; background-image:url(./img/bg_2016_1.jpg); background-size:cover; font-family:"Bungee Inline", "Apple SD Gothic Neo", gulim, "굴림", sans-serif; font-style:normal;}
+	html, body {width:100%;	height:100%; background:url(./img/bg_2016_1.jpg) no-repeat 30% 0; background-size:cover; font-family:"Bungee Inline", "Apple SD Gothic Neo", gulim, "굴림", sans-serif; font-style:normal;}
 	.dimmed {position:absolute; top:0; left:0; width:100%; height:100%; background-color:#000; opacity:0.5; z-index:1;}
-	.teaser {position:absolute; top:50%; width:100%; height:300px; margin-top:-150px; color:#fff; text-align:center; z-index:2;	font-size:.9em;}
-	h1 {font-size:5em; font-weight:normal;}
-	h2 {font-size:3.5em; font-weight:normal; font-family:"Bungee Outline", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;}
+	.teaser {position:absolute; top:50%; width:100%; height:380px; margin-top:-190px; color:#fff; text-align:center; z-index:2;	font-size:.9em;}
+	h1 {font-size:8em; font-weight:normal;}
+	h2 {font-size:6em; font-weight:normal; font-family:"Bungee Outline", "Apple SD Gothic Neo", gulim, "굴림", sans-serif; margin-top:.2em;}
 	h1 span {font-size:.8em;}
-	.subject {font-size:1.7em; margin-top:1em;}
+	.subject {font-size:3em; margin-top:2em;}
 	.subject span {font-size:.7em;}
-	.schedule {position:fixed; bottom:0; width:100%; font-family:"Faster One", "Apple SD Gothic Neo", gulim, "굴림", sans-serif; font-size:3em;	padding-bottom:1em;}
-	@media all and (min-width:768px) {
-		.teaser {font-size:1.1em;}
+	.schedule {position:fixed; bottom:0; width:100%; font-family:"Faster One", "Apple SD Gothic Neo", gulim, "굴림", sans-serif; font-size:3em; margin-top:2em; padding-bottom:1em;}
+	/*@media all and (min-width:768px) {
+		.teaser {font-size:.8em;}
+	}*/
+	@media only screen  and (min-width : 1224px) {
+		body {background-position:0 0;}
+		.teaser {font-size:.7em;}
 	}
 	</style>
 </head>
