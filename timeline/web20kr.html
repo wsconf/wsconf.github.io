@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>웹 20주년</title>
+</head>
+
+<body>
+    <div id="web20kr"></div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
+    <script>
+    $(document).ready(function() {
+        createStoryJS({
+            type: 'timeline',
+            width: '100%',
+            height: '768',
+            source: 'https://docs.google.com/spreadsheets/d/10Dt9eaSIS4YXfhYQk8BWKBDZ-QZO3uCh6eeLAr1KtbM/edit?usp=sharing',
+            embed_id: 'web20kr',
+            font: 'PT'
+        });
+
+        var autoSlider = (function() {
+            'use strict';
+
+            var autoSlider = {
+                init: function() {
+                    this.initVar();
+                    this.start();
+                    this.addHander();
+                },
+                initVar: function() {
+                    this.autoSlide = null;
+                    this.slideCount = $('.slider-item').length - 1;
+                    this.slideIndex = 0;
+                    this.delay = 5000;
+                },
+                autoPlay:function() {
+                    var  url = window.location.href;
+                    var hash = parseInt(url.substring(url.indexOf("#") + 1));
+
+                    if (isNaN(hash) || hash === this.slideCount) {
+                        window.location.href = '#0';
+                        this.slideIndex = 0;
+                    } else {
+                        window.location.href = '#' + this.slideIndex;
+                        this.slideIndex = this.slideIndex + 1;
+                    }
+                },
+                start: function() {
+                    this.autoSlide = setInterval(function() {
+                        this.autoPlay();
+                    }.bind(this), this.delay);
+                },
+                stop: function() {
+                    clearInterval(this.autoSlide);
+                },
+                addHander: function() {
+                    $(document)
+                        .on('mouseover', '.slider-item', function() {
+                            this.stop();
+                        }.bind(this))
+                        .on('mouseout', '.slider-item', function() {
+                            this.start();
+                        }.bind(this));
+                }
+            };
+
+            return autoSlider;
+        }());
+
+        var loadTimeline = setInterval(function() {
+            if ($('.slider-item').length) {
+                clearInterval(loadTimeline);
+                autoSlider.init();
+            }
+        }, 100);
+    });
+    </script>
+</body>
+
+</html>
