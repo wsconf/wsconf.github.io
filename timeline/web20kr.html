@@ -3,7 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta property="og:title" content="WSConf.2016 Seoul">
+    <meta property="og:url" content="http://wsconf.org/timeline/web20kr.html">
+    <meta property="og:image" content="http://wsconf.org/img/www20kr.png">
+    <meta property="og:description" content="한국 웹20주년 1994-2014">
     <title>웹 20주년</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 </head>
 
 <body>
@@ -15,8 +21,9 @@
         createStoryJS({
             type: 'timeline',
             width: '100%',
-            height: '768',
-            source: 'https://docs.google.com/spreadsheets/d/10Dt9eaSIS4YXfhYQk8BWKBDZ-QZO3uCh6eeLAr1KtbM/edit?usp=sharing',
+            height: $(document).outerHeight(),
+            hash_bookmark:true,
+            source: 'https://docs.google.com/spreadsheets/d/1Tr8A_jZIxIK6ng5UQMVEiyTOlB-0Cgd9OwOmBMAMFY0/pubhtml',
             embed_id: 'web20kr',
             font: 'PT'
         });
@@ -33,37 +40,48 @@
                 initVar: function() {
                     this.autoSlide = null;
                     this.slideCount = $('.slider-item').length - 1;
-                    this.slideIndex = 0;
                     this.delay = 5000;
+                },
+                isTouchDevice: function() {
+                    return !!('ontouchstart' in window);
                 },
                 autoPlay:function() {
                     var  url = window.location.href;
                     var hash = parseInt(url.substring(url.indexOf("#") + 1));
 
-                    if (isNaN(hash) || hash === this.slideCount) {
-                        window.location.href = '#0';
-                        this.slideIndex = 0;
+                    if (hash === this.slideCount ) {
+                        window.location.href = "#0";
                     } else {
-                        window.location.href = '#' + this.slideIndex;
-                        this.slideIndex = this.slideIndex + 1;
+                        $('.nav-next').trigger('click');
                     }
                 },
                 start: function() {
-                    this.autoSlide = setInterval(function() {
-                        this.autoPlay();
-                    }.bind(this), this.delay);
+                    var  url = window.location.href;
+                    var hash = parseInt(url.substring(url.indexOf("#") + 1));
+
+                    if (isNaN(hash)) {
+                        window.location.href = "#0";
+                    }
+
+                    if (!this.isTouchDevice()) {
+                        this.autoSlide = setInterval(function() {
+                            this.autoPlay();
+                        }.bind(this), this.delay);
+                    }
                 },
                 stop: function() {
                     clearInterval(this.autoSlide);
                 },
                 addHander: function() {
-                    $(document)
-                        .on('mouseover', '.slider-item', function() {
-                            this.stop();
-                        }.bind(this))
-                        .on('mouseout', '.slider-item', function() {
-                            this.start();
-                        }.bind(this));
+                    if (!this.isTouchDevice()) {
+                        $(document)
+                            .on('mouseover', '#web20kr', function() {
+                                this.stop();
+                            }.bind(this))
+                            .on('mouseout', '#web20kr', function() {
+                                this.start();
+                            }.bind(this));
+                    }
                 }
             };
 
