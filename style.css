@@ -158,7 +158,24 @@ strong {
 .speakers_info_photo img {
     max-width: 100%;
 }
+.section_schedule_item {
+    width:100%;
+    margin:0 auto;
+    border-top:1px solid #3a3c4f;
+}
+.section_schedule_timetable {
+    text-align:left;
+    border-bottom:1px solid #3a3c4f;
+    padding:0.9em 1em;
+}
 
+.section_schedule_timetable .time {
+    color:#797da2;
+}
+.section_schedule_timetable .subject {
+
+    font-size:1.4em;
+}
 .section_speakers_item .speakers .name {
     font-size: 1.2em;
     color: #2CB2C4;
@@ -244,6 +261,9 @@ strong {
         width: 30%;
         padding: 1.6%;
     }
+    .section_schedule_item {
+        width:90%;
+    }
 }
 
 @media (min-width: 768px) {
@@ -255,6 +275,9 @@ strong {
     }
     .section_about .section_description_subject {
         font-size: 1.4em;
+    }
+    .section_schedule_item {
+        width:80%;
     }
     .section_speakers_item li {
         width: 27%;
@@ -274,5 +297,8 @@ strong {
 @media (min-width: 1200px) {
     .section .inner {
         width: 1140px
+    }
+    .section_schedule_item {
+        width:70%;
     }
 }
