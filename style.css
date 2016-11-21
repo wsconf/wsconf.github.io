@@ -18,12 +18,34 @@ a:hover,
 a:active {
     color: #E44F26;
 }
+
 strong {
-    color:#E44F26;
-    font-weight:bold;
+    color: #E44F26;
+    font-weight: bold;
 }
+
 .header {
+    position:relative;
+    background: url('img/bg_2016_3.jpg') no-repeat center center;
+    background-size: cover;
+}
+.header .inner {
+    position:relative;
+    width: 100%;
+    height: 400px;
     padding-top: 5em;
+    z-index:2;
+
+}
+.header .dimmed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 1;
 }
 
 .header_title {
@@ -44,7 +66,7 @@ strong {
 
 .section .inner {
     margin: 0 auto;
-    padding: 96px 20px;
+    padding: 120px 20px;
 }
 
 .section .inner:after {
@@ -91,13 +113,16 @@ strong {
     border-radius: 6px;
     margin: 20px auto;
 }
+
 .section_description_subject {
     font-size: 1.5em;
-    margin-bottom:2em;
+    margin-bottom: 2em;
 }
+
 .section_about_logo img {
     width: 50%;
 }
+
 .section_about .section_description_subject {
     font-size: 1.2em;
     padding: 2em 1em 0em;
@@ -154,40 +179,46 @@ strong {
 .speakers_info_photo img {
     max-width: 100%;
 }
-.section_schedule_item {
-    width:100%;
-    margin:0 auto;
-    border-top:1px solid #3a3c4f;
-}
-.section_schedule_timetable {
-    position:relative;
-    text-align:left;
-    border-bottom:1px solid #3a3c4f;
-    padding-top:1em;
-    padding-bottom: 1em;
-    padding-left:80px;
-}
-.section_schedule_timetable.breaktime .subject {
-    color:#797da2;
-}
-.section_schedule_timetable .time {
-    color:#797da2;
-}
-.section_schedule_timetable .subject {
 
-    font-size:1.4em;
+.section_schedule_item {
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid #3a3c4f;
 }
+
+.section_schedule_timetable {
+    position: relative;
+    text-align: left;
+    border-bottom: 1px solid #3a3c4f;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 80px;
+}
+
+.section_schedule_timetable.breaktime .subject {
+    color: #797da2;
+}
+
+.section_schedule_timetable .time {
+    color: #797da2;
+}
+
+.section_schedule_timetable .subject {
+    font-size: 1.4em;
+}
+
 .section_schedule_timetable .icon {
-    position:absolute;
-    top:35%;
-    left:0;
-    width:60px;
-    height:26px;
-    background-color:#797da2;
-    color:#000;
-    text-align:center;
-    border-radius:13px;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 60px;
+    height: 26px;
+    background-color: #797da2;
+    color: #000;
+    text-align: center;
+    border-radius: 13px;
 }
+
 .section_speakers_item .speakers .name {
     font-size: 1.2em;
     color: #2CB2C4;
@@ -207,54 +238,82 @@ strong {
     max-width: 100%;
 }
 
+.section_location .inner {
+    padding-bottom: 30px;
+}
+
+.section_location .section_description_subject {
+    margin-bottom: 0.5em;
+    font-size: 1.7em;
+}
+
+.section_location .section_location_address {
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+}
+
+.section_tickets .section_description_subject span {
+    text-decoration: underline;
+    font-size: 0.9em;
+}
+
+.section_tickets .section_tickets_bank {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
+
 .section_tickets_button a {
-    display:inline-block;
-    font-size:2em;
-    width:10em;
-    height:2em;
-    border-radius:1.2em;
-    background-color:#E44F26;
-    padding-top:.4em;
+    display: inline-block;
+    font-size: 2em;
+    width: 10em;
+    height: 2em;
+    border-radius: 1.2em;
+    background-color: #E44F26;
+    padding-top: .4em;
 }
+
 .section_tickets_button.soldout a {
-    background-color:#eee;
-    color:#000;
+    background-color: #eee;
+    color: #000;
 }
+
 .section_tickets_caution {
-    max-width:70%;
-    margin:4em auto 2em;
-    text-align:left;
+    max-width: 90%;
+    margin: 4em auto 2em;
+    text-align: left;
 }
+
 .section_tickets_caution dt {
-    font-size:1.5em;
-    font-weight:bold;
-    border-bottom:1px solid #3a3c4f;
-    margin-bottom:1em;
-    padding-bottom:.2em;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: 1px solid #3a3c4f;
+    margin-bottom: 1em;
+    padding-bottom: .2em;
 }
+
 .section_tickets_caution dd {
-    text-indent:-20px;
-    margin-left:20px;
-    margin-bottom:10px;
+    text-indent: -20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
+
 .section_tickets_caution i:after {
-    content:'';
-    display:inline-block;
-    width:8px;
-    height:8px;
-    margin-right:10px;
-    border-top:3px solid #E44F26;
- border-right:3px solid #E44F26;
- -webkit-transform: rotate(45deg);
- transform: rotate(45deg);
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-top: 3px solid #E44F26;
+    border-right: 3px solid #E44F26;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
+
 .section_qna_item {
     margin-bottom: 4em;
 }
 
-.section_qna_item .info {
-
-}
+.section_qna_item .info {}
 
 
 /* Media */
@@ -271,7 +330,10 @@ strong {
         padding: 1.6%;
     }
     .section_schedule_item {
-        width:90%;
+        width: 90%;
+    }
+    .section_tickets_caution {
+        max-width: 90%;
     }
 }
 
@@ -286,7 +348,7 @@ strong {
         font-size: 1.4em;
     }
     .section_schedule_item {
-        width:80%;
+        width: 80%;
     }
     .section_speakers_item li {
         width: 27%;
@@ -299,15 +361,25 @@ strong {
     .section_speakers_item .speakers .company {
         font-size: 1.3em;
     }
+    .section_tickets_caution {
+        max-width: 75%;
+    }
 }
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .section_tickets_caution {
+        max-width: 60%;
+    }
+}
 
 @media (min-width: 1200px) {
     .section .inner {
         width: 1140px
     }
     .section_schedule_item {
-        width:70%;
+        width: 70%;
+    }
+    .section_tickets_caution {
+        max-width: 60%;
     }
 }
