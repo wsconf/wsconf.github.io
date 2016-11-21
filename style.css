@@ -62,10 +62,6 @@ strong {
     line-height: 1em;
 }
 
-.section_organizers .section_title {
-    font-size: 2.5em;
-}
-
 .section_when .section_title:after {
     background-color: #D02E28;
 }
@@ -82,7 +78,7 @@ strong {
     background-color: #E44F26;
 }
 
-.section_organizers .section_title:after {
+.section_tickets .section_title:after {
     background-color: #A83F62;
 }
 
@@ -164,17 +160,33 @@ strong {
     border-top:1px solid #3a3c4f;
 }
 .section_schedule_timetable {
+    position:relative;
     text-align:left;
     border-bottom:1px solid #3a3c4f;
-    padding:0.9em 1em;
+    padding-top:1em;
+    padding-bottom: 1em;
+    padding-left:80px;
 }
-
+.section_schedule_timetable.breaktime .subject {
+    color:#797da2;
+}
 .section_schedule_timetable .time {
     color:#797da2;
 }
 .section_schedule_timetable .subject {
 
     font-size:1.4em;
+}
+.section_schedule_timetable .icon {
+    position:absolute;
+    top:35%;
+    left:0;
+    width:60px;
+    height:26px;
+    background-color:#797da2;
+    color:#000;
+    text-align:center;
+    border-radius:13px;
 }
 .section_speakers_item .speakers .name {
     font-size: 1.2em;
@@ -252,9 +264,6 @@ strong {
 @media (min-width: 480px) {
     .section_about_logo img {
         width: 30%;
-    }
-    .section_organizers .section_title {
-        font-size: 3.5em;
     }
     .section_about_item {
         float: left;
