@@ -314,6 +314,11 @@ main {
             width: 44%;
             padding: 0 2%;
             margin-bottom: 3em;
+
+            &:hover img {
+                -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+            }
         }
 
         .speakers {
@@ -338,11 +343,6 @@ main {
         margin-bottom: 1em;
         border-radius: 50%;
         z-index:1;
-
-        &:hover img {
-            -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-        }
 
         img {
             max-width: 100%;

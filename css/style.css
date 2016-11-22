@@ -294,6 +294,10 @@ main {
   padding: 0 2%;
   margin-bottom: 3em;
 }
+.section_speakers .section_speakers_item li:hover img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
 .section_speakers .section_speakers_item .speakers {
   display: inline-block;
 }
@@ -312,10 +316,6 @@ main {
   margin-bottom: 1em;
   border-radius: 50%;
   z-index: 1;
-}
-.section_speakers .speakers_info_photo:hover img {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
 }
 .section_speakers .speakers_info_photo img {
   max-width: 100%;
