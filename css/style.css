@@ -92,8 +92,10 @@ em {
 
 .header .inner, .section_when .inner, .section_sponsors .inner, .section_location .inner, .section_tickets .inner {
   position: absolute;
+  left: 50%;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
   width: 100%;
   padding: 0 !important;
 }
@@ -146,6 +148,7 @@ main {
 }
 .section .inner {
   margin: 0 auto;
+  max-width: 1140px;
 }
 .section .inner:after {
   content: '';
