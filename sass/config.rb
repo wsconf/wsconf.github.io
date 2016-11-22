@@ -6,4 +6,4 @@ javascripts_dir = "../js/"
 output_style = :expanded
 relative_assets=true
 line_comments = false
-
+sourcemap = true
