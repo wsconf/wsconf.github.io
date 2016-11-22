@@ -1,0 +1,531 @@
+@charset "utf-8";
+
+html, body {
+    height: 100%;
+}
+
+/* Media */
+body {
+    line-height: 1.5;
+    font-size: 1em;
+    font-family: "Roboto Slab", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
+    text-align: center;
+    color: #fff;
+    background-color: #1E1F29;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+
+    &:link {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &:hover {
+        color: #E44F26;
+    }
+
+    &:active {
+        color: #E44F26;
+    }
+}
+
+strong {
+    color: #E44F26;
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+%f_clear {
+    &:after {
+        content: "";
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear:both;
+    }
+}
+
+%vertical_middle {
+    position:absolute;
+    left:50%;
+    top:50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    width:100%;
+    padding:0 !important;
+}
+
+.header {
+    position: relative;
+    height: 100%;
+    background: url("../img/bg_2016_3.jpg") no-repeat center center;
+    background-size: cover;
+
+    .inner {
+        @extend %vertical_middle;
+
+        width: 100%;
+        z-index: 2;
+    }
+
+    .dimmed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.5;
+        z-index: 1;
+    }
+
+    .header_title {
+        margin: 0 auto;
+        text-align: center;
+        font-family: "Bungee Inline", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
+        font-size: 6em;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .header_title_desc {
+        font-family: "Bungee Outline", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
+        font-size:4em;
+    }
+}
+
+main {
+    height:100%;
+}
+
+.section {
+    position:relative;
+    clear: both;
+    border-top: 1px solid #111;
+
+    &:nth-of-type(1) {
+        border-top:none;
+    }
+
+    .inner {
+        margin: 0 auto;
+        max-width:1140px;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            clear: both;
+        }
+    }
+}
+
+.section_title {
+    padding: 120px 20px 0.6em;
+    // padding-bottom: 0.6em;
+    font-size: 3em;
+    font-family: "Bungee", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
+    line-height: 1em;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 12px;
+        background-color: #2CB2C4;
+        border-radius: 6px;
+        margin: 20px auto;
+    }
+}
+
+.section_description {
+    padding: 0 20px 120px;
+}
+
+.section_description_subject {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
+
+.section_content {
+    @extend %f_clear;
+}
+
+.section_about {
+    min-height:100%;
+
+    .section_about_logo {
+        img {
+            width: 50%;
+        }
+    }
+
+    .section_description_subject {
+        font-size: 1.2em;
+        padding: 2em 1em 0em;
+    }
+
+    .section_about_item {
+        padding: 1.6%;
+
+        dt {
+            font-size: 1.3em;
+            font-family: "Roboto Slab", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: url("../img/icon_html_32px.png") no-repeat center top;
+            padding-top: 1.8em;
+            padding-bottom: 1em;
+            color: #30b4c5;
+        }
+
+        dd {
+            margin-bottom: 2.5em;
+            text-align: left;
+        }
+
+        em {
+            a {
+                display: block;
+                color: #999;
+                text-align: right;
+                margin-top: -1em;
+            }
+        }
+
+        .en {
+            display: block;
+            padding-top: .5em;
+        }
+
+        .ko {
+            display: block;
+            padding-top: .5em;
+            text-align: justify;
+        }
+    }
+
+    .section_about_css {
+        dt {
+            background-image: url("../img/icon_css_32px.png");
+        }
+    }
+
+    .section_about_a11y {
+        clear: both;
+
+        dt {
+            background-image: url("../img/icon_accessibility_32px.png");
+        }
+    }
+
+    .section_about_seo {
+        dt {
+            background-image: url("../img/icon_seo_32px.png");
+        }
+    }
+}
+
+.section_when {
+    min-height:100%;
+
+    .inner {
+        @extend %vertical_middle;
+    }
+    .section_title {
+        &:after {
+            background-color: #D02E28;
+        }
+    }
+
+    .section_when_item {
+        font-size: 2em;
+    }
+}
+
+.section_schedule {
+    .section_title {
+        &:after {
+            background-color: #F99D21;
+        }
+    }
+
+    .section_schedule_item {
+        width: 100%;
+        margin: 0 auto;
+        border-top: 1px solid #3a3c4f;
+    }
+
+    .section_schedule_timetable {
+        position: relative;
+        text-align: left;
+        border-bottom: 1px solid #3a3c4f;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 80px;
+
+        .time {
+            color: #797da2;
+        }
+
+        .subject {
+            font-size: 1.4em;
+        }
+
+        .icon {
+            position: absolute;
+            top: 35%;
+            left: 0;
+            width: 60px;
+            height: 26px;
+            background-color: #797da2;
+            color: #000;
+            text-align: center;
+            border-radius: 13px;
+        }
+    }
+
+    .section_schedule_timetable.breaktime {
+        .subject {
+            color: #797da2;
+        }
+    }
+}
+
+.section_speakers {
+    .section_title {
+        &:after {
+            background-color: #2CB2C4;
+        }
+    }
+
+    .section_speakers_item {
+        li {
+            display: inline-block;
+            width: 44%;
+            padding: 0 2%;
+            margin-bottom: 3em;
+
+            html.no-touch & {
+                &:hover img {
+                    -webkit-transform: scale(1.2);
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        .speakers {
+            display: inline-block;
+
+            .name {
+                font-size: 1.2em;
+                color: #2CB2C4;
+                font-weight: bold;
+            }
+
+            .company {
+                font-size: 0.9em;
+            }
+        }
+    }
+
+    .speakers_info_photo {
+        position:relative;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 1em;
+        border-radius: 50%;
+        z-index:1;
+
+        img {
+            max-width: 100%;
+            -webkit-transition: -webkit-transform .3s;
+            transition: -webkit-transform .3s;
+            transition: transform .3s;
+            transition: transform .3s, -webkit-transform .3s;
+        }
+    }
+}
+
+.section_sponsors {
+    min-height:100%;
+
+    .inner {
+        @extend %vertical_middle;
+    }
+
+    .section_title {
+        &:after {
+            background-color: #694EA0;
+        }
+    }
+
+    .section_sponsors_item {
+        li {
+            display: inline-block;
+            padding: 1em 3em;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.section_location {
+    min-height:100%;
+
+    .inner {
+        max-width:100%;
+        @extend %vertical_middle;
+    }
+
+    .section_title {
+        &:after {
+            background-color: #E44F26;
+        }
+    }
+
+    .section_description {
+        padding-bottom:30px;
+    }
+
+    .section_description_subject {
+        margin-bottom: 0.5em;
+        font-size: 1.7em;
+    }
+
+    .section_location_address {
+        margin-bottom: 0.5em;
+        font-size: 1.2em;
+    }
+}
+
+.section_tickets {
+    min-height:100%;
+
+    .inner {
+        @extend %vertical_middle;
+    }
+
+    .section_title {
+        &:after {
+            background-color: #A83F62;
+        }
+    }
+
+    .section_description_subject {
+        span {
+            text-decoration: underline;
+            font-size: 0.9em;
+        }
+    }
+
+    .section_tickets_bank {
+        font-size: 1.5em;
+        margin-bottom: 2em;
+    }
+
+    .section_tickets_button {
+        a {
+            display: inline-block;
+            font-size: 2em;
+            width: 9em;
+            height: 2em;
+            border-radius: 1.2em;
+            background-color: #E44F26;
+            padding-top: .4em;
+            -webkit-transition: -webkit-transform .3s;
+            transition: -webkit-transform .3s;
+            transition: transform .3s;
+            transition: transform .3s, -webkit-transform .3s;
+
+            &:hover {
+                color:#fff;
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .section_tickets_button.soldout {
+        a {
+            background-color: #eee;
+            color: #000;
+        }
+    }
+
+    .section_tickets_caution {
+        max-width: 90%;
+        margin: 4em auto 2em;
+        text-align: left;
+
+        dt {
+            font-size: 1.5em;
+            font-weight: bold;
+            border-bottom: 1px solid #3a3c4f;
+            margin-bottom: 1em;
+            padding-bottom: .2em;
+        }
+
+        dd {
+            text-indent: -20px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        i {
+            &:after {
+                content: '';
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                margin-right: 10px;
+                border-top: 3px solid #E44F26;
+                border-right: 3px solid #E44F26;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.section_qna {
+    .section_qna_item {
+        margin-bottom: 4em;
+    }
+
+}
+
+.remodal-wrapper {
+    .remodal {
+        text-align:left;
+        border-radius: 10px;
+
+        h2 {
+            padding:0 15px 15px;
+            margin-bottom:15px;
+            border-bottom:1px solid #e5e5e5;
+            font-size:1.5em;
+        }
+        .info {
+            text-align:right;
+        }
+        p {
+            margin-top:1em;
+        }
+        .remodal-close, .remodal-close:before {
+            left:auto;
+            right:0;
+        }
+    }
+}
