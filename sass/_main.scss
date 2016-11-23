@@ -315,9 +315,11 @@ main {
             padding: 0 2%;
             margin-bottom: 3em;
 
-            &:hover img {
-                -webkit-transform: scale(1.2);
-                transform: scale(1.2);
+            html.no-touch & {
+                &:hover img {
+                    -webkit-transform: scale(1.2);
+                    transform: scale(1.2);
+                }
             }
         }
 
@@ -383,6 +385,7 @@ main {
     min-height:100%;
 
     .inner {
+        max-width:100%;
         @extend %vertical_middle;
     }
 
