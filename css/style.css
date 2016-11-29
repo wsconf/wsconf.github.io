@@ -160,7 +160,7 @@ main {
 
 .section_title {
   padding: 120px 20px 0.6em;
-  font-size: 3em;
+  font-size: 4.5em;
   font-family: "Bungee", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
   line-height: 1em;
 }
@@ -188,6 +188,9 @@ main {
 }
 .section_about .section_about_logo img {
   width: 50%;
+}
+.section_about .section_title span {
+  font-size: 0.7em;
 }
 .section_about .section_description_subject {
   font-size: 1.2em;
@@ -434,16 +437,42 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
   border-radius: 10px;
 }
 .remodal-wrapper .remodal h2 {
-  padding: 0 15px 15px;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
   border-bottom: 1px solid #e5e5e5;
-  font-size: 1.5em;
-}
-.remodal-wrapper .remodal .info {
-  text-align: right;
+  font-size: 2em;
+  font-weight: bold;
 }
 .remodal-wrapper .remodal p {
-  margin-top: 1em;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+.remodal-wrapper .remodal li {
+  padding-left: 15px;
+}
+.remodal-wrapper .remodal .info {
+  position: relative;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 30px;
+  padding-top: 20px;
+}
+.remodal-wrapper .remodal .info h3 {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.remodal-wrapper .remodal .info .url {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+.remodal-wrapper .remodal .info .url img {
+  width: 32px;
+}
+.remodal-wrapper .remodal .info h4 {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 20px;
 }
 .remodal-wrapper .remodal .remodal-close, .remodal-wrapper .remodal .remodal-close:before {
   left: auto;
@@ -470,7 +499,7 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
 }
 @media (min-width: 768px) {
   .section_title {
-    font-size: 4.5em !important;
+    font-size: 6.5em !important;
   }
 
   .section_about .section_about_logo img {

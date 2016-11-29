@@ -132,7 +132,7 @@ main {
 .section_title {
     padding: 120px 20px 0.6em;
     // padding-bottom: 0.6em;
-    font-size: 3em;
+    font-size: 4.5em;
     font-family: "Bungee", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
     line-height: 1em;
 
@@ -167,6 +167,10 @@ main {
         img {
             width: 50%;
         }
+    }
+
+    .section_title span {
+        font-size:0.7em;
     }
 
     .section_description_subject {
@@ -512,16 +516,45 @@ main {
         border-radius: 10px;
 
         h2 {
-            padding:0 15px 15px;
-            margin-bottom:15px;
+            padding-bottom:15px;
+            margin-bottom:30px;
             border-bottom:1px solid #e5e5e5;
-            font-size:1.5em;
-        }
-        .info {
-            text-align:right;
+            font-size:2em;
+            font-weight:bold;
         }
         p {
-            margin-top:1em;
+            padding-left:15px;
+            padding-bottom:10px;
+        }
+        li {
+            padding-left:15px;
+        }
+        .info {
+            position:relative;
+            border-top:1px solid #e5e5e5;
+            margin-top:30px;
+            padding-top:20px;
+
+            h3 {
+                font-weight:bold;
+                font-size:1.5em;
+                margin-bottom:10px;
+            }
+
+            .url {
+                position:absolute;
+                top:20px;
+                right:0;
+            }
+
+            .url img {
+                width:32px;
+            }
+            h4 {
+                font-weight:bold;
+                font-size:1.2em;
+                margin-top:20px;
+            }
         }
         .remodal-close, .remodal-close:before {
             left:auto;
