@@ -187,7 +187,7 @@ main .section .inner:after {
 }
 
 .section_about {
-  min-height: auto;
+  min-height: auto !important;
 }
 .section_about .section_about_logo img {
   width: 50%;
@@ -352,7 +352,7 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
 }
 
 .section_location .inner {
-  max-width: 100%;
+  max-width: 100% !important;
 }
 .section_location .section_title:after {
   background-color: #E44F26;
@@ -457,6 +457,19 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
   text-align: left;
   border-radius: 10px;
   padding: 30px 26px;
+}
+.remodal-wrapper .remodal a {
+  color: #000;
+}
+.remodal-wrapper .remodal a:link {
+  color: #E44F26 !important;
+  text-decoration: underline;
+}
+.remodal-wrapper .remodal a:hover {
+  color: #E44F26;
+}
+.remodal-wrapper .remodal a:active {
+  color: #E44F26;
 }
 .remodal-wrapper .remodal h2 {
   padding-bottom: 15px;
