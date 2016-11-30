@@ -1,6 +1,16 @@
 @charset "utf-8";
 
 @media (min-width: 480px) {
+    .header {
+        .header_title_logo {
+            img {
+                width: 200px;
+            }
+        }
+    }
+    .section_title {
+        font-size:4.5em;
+    }
     .section_about {
         .section_about_logo {
             img {
@@ -11,6 +21,13 @@
             float: left;
             width: 42%;
             padding: 0 4%;
+        }
+    }
+
+    .section_when {
+
+        .section_when_item {
+            font-size: 3em;
         }
     }
 
@@ -27,8 +44,20 @@
     }
 }
 @media (min-width: 768px) {
+    .header {
+        .header_title {
+            font-size:6.5em;
+        }
+        .header_title_desc {
+            font-size:3.8em;
+            margin-top:-40px;
+        }
+        .header_subject {
+            font-size:1.5em;
+        }
+    }
     .section_title {
-        font-size: 4.5em !important;
+        font-size: 5.5em;
     }
 
     .section_about {
@@ -59,6 +88,11 @@
         .section_schedule_item {
             width: 80%;
         }
+        .section_schedule_timetable {
+            .subject {
+                font-size:1.5em;
+            }
+        }
     }
 
     .section_speakers {
@@ -83,7 +117,20 @@
         .section_tickets_caution {
             max-width: 75%;
         }
+
+        .section_description_subject {
+            font-size:1.8em;
+        }
     }
+
+    .section_qna {
+
+        .section_description_subject {
+            font-size:1.6em;
+        }
+
+    }
+
 }
 @media (min-width: 992px) {
     .section_tickets {
@@ -95,13 +142,13 @@
 
 @media (max-width: 1023px) {
     .header {
-        .header_title {
-            font-size:3em;
-        }
+        // .header_title {
+        //     font-size:3em;
+        // }
 
-        .header_title_desc {
-            font-size:2em;
-        }
+        // .header_title_desc {
+        //     font-size:2em;
+        // }
     }
 
     .section_about, .section_sponsors, .section_location, .section_tickets {
@@ -125,13 +172,60 @@
 
     .section_schedule {
         .section_schedule_item {
-            width: 70%;
+            width: 75%;
+        }
+
+        .section_schedule_timetable {
+            position:relative;
+
+            .subject {
+                font-size:1.8em;
+
+                .speakers {
+                    position:absolute;
+                    top:10px;
+                    right:0;
+                    font-size:0.6em;
+                }
+            }
         }
     }
 
     .section_tickets {
         .section_tickets_caution {
             max-width: 60%;
+        }
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+    .header {
+        .header_title_logo {
+            float:left;
+            margin-left:100px;
+            margin-right:-100px;
+            margin-top:20px;
+
+            img {
+                width: 120px;
+            }
+        }
+    }
+    .section_speakers {
+        .section_speakers_item {
+            li {
+                width: 27%;
+                padding: 0 2.5%;
+                margin-bottom: 5em;
+            }
+            .speakers {
+                .name {
+                    font-size: 1.5em;
+                }
+                .company {
+                    font-size: 1.2em;
+                }
+            }
         }
     }
 }
