@@ -12,6 +12,36 @@ body {
     text-align: center;
     color: #fff;
     background-color: #1E1F29;
+    -webkit-transition:background-color 0.5s ease-in-out;
+    transition:background-color 0.5s ease-in-out;
+
+    &.when {
+        background-color:#D02E28;
+    }
+
+    &.schedule {
+        background-color:#F99D21;
+    }
+
+    &.speakers {
+        background-color:#2CB2C4;
+    }
+
+    &.sponsors {
+        background-color:#694EA0;
+    }
+
+    &.location {
+        background-color:#E44F26;
+    }
+
+    &.tickets {
+        background-color:#A83F62;
+    }
+
+    &.qna {
+        background-color:#2CB2C4;
+    }
 }
 
 a {
@@ -171,7 +201,14 @@ main {
 }
 
 .section_about {
+<<<<<<< HEAD
     min-height:auto !important;
+=======
+    background-color:#1E1F29;
+    main & {
+        min-height:auto;
+    }
+>>>>>>> develop
 
     .section_about_logo {
         img {
