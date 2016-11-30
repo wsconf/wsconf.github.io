@@ -145,21 +145,20 @@ em {
 main {
   height: 100%;
 }
-
-.section {
+main .section {
   position: relative;
   clear: both;
   border-top: 1px solid #111;
   min-height: 100%;
 }
-.section:nth-of-type(1) {
+main .section:nth-of-type(1) {
   border-top: none;
 }
-.section .inner {
+main .section .inner {
   margin: 0 auto;
   max-width: 1140px;
 }
-.section .inner:after {
+main .section .inner:after {
   content: '';
   display: block;
   width: 0;
@@ -444,6 +443,10 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
 }
 .section_qna .section_description_subject {
   font-size: 1.2em;
+}
+
+.footer {
+  clear: both;
 }
 
 .remodal-wrapper {
