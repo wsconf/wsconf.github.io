@@ -555,10 +555,10 @@ main {
         padding:30px 26px;
 
         a {
-            color: #000;
+            color: #E44F26;
 
             &:link {
-                color: #E44F26 !important;
+                color: #E44F26;
                 text-decoration: underline;
             }
 
@@ -580,6 +580,7 @@ main {
             font-weight:bold;
             line-height:1.2;
         }
+
         p {
             padding-bottom:10px;
         }
@@ -612,6 +613,7 @@ main {
             .url img {
                 width:32px;
             }
+
             h4 {
                 font-weight:bold;
                 font-size:1.2em;
