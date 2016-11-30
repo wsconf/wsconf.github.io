@@ -8,7 +8,7 @@ html, body {
 body {
     line-height: 1.5;
     font-size: 1em;
-    font-family: "Roboto Slab", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
+    font-family: "Roboto Slab", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", gulim, "굴림", sans-serif;
     text-align: center;
     color: #fff;
     background-color: #1E1F29;
@@ -81,50 +81,65 @@ em {
         width: 100%;
         height: 100%;
         background-color: #000;
-        opacity: 0.5;
+        opacity: 0.6;
         z-index: 1;
     }
 
     .header_title {
         margin: 0 auto;
         text-align: center;
-        font-family: "Bungee Inline", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
-        font-size: 6em;
+        font-family: "Bungee Inline", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", gulim, "굴림", sans-serif;
+        font-size: 4.5em;
 
-        img {
-            max-width: 100%;
+        span {
+            font-size:.7em;
         }
+        // img {
+        //     max-width: 100%;
+        // }
     }
 
     .header_title_desc {
-        font-family: "Bungee Outline", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
-        font-size:4em;
+        font-family: "Bungee Outline", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", gulim, "굴림", sans-serif;
+        font-size:2.6em;
+        margin-top:-20px;
+    }
+    .header_title_logo {
+        img {
+            width: 120px;
+        }
+    }
+
+    .header_subject {
+        font-size: 1.2em;
+        padding: 30px 36px 0;
     }
 }
 
 main {
     height:100%;
-}
 
-.section {
-    position:relative;
-    clear: both;
-    border-top: 1px solid #111;
+    .section {
+        position:relative;
+        clear: both;
+        border-top: 1px solid #111;
+        min-height:100%;
 
-    &:nth-of-type(1) {
-        border-top:none;
-    }
+        &:nth-of-type(1) {
+            border-top:none;
+        }
 
-    .inner {
-        margin: 0 auto;
-        max-width:1140px;
+        .inner {
+            margin: 0 auto;
+            max-width:1140px;
 
-        &:after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 0;
-            clear: both;
+            &:after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 0;
+                clear: both;
+            }
         }
     }
 }
@@ -132,8 +147,8 @@ main {
 .section_title {
     padding: 120px 20px 0.6em;
     // padding-bottom: 0.6em;
-    font-size: 3em;
-    font-family: "Bungee", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
+    font-size: 3.5em;
+    font-family: "Bungee", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", gulim, "굴림", sans-serif;
     line-height: 1em;
 
     &:after {
@@ -151,17 +166,12 @@ main {
     padding: 0 20px 120px;
 }
 
-.section_description_subject {
-    font-size: 1.5em;
-    margin-bottom: 2em;
-}
-
 .section_content {
     @extend %f_clear;
 }
 
 .section_about {
-    min-height:100%;
+    min-height:auto !important;
 
     .section_about_logo {
         img {
@@ -169,28 +179,37 @@ main {
         }
     }
 
+    .section_description {
+        padding: 50px 20px 50px;
+    }
+
+    .section_title span {
+        font-size:0.7em;
+    }
+
     .section_description_subject {
         font-size: 1.2em;
-        padding: 2em 1em 0em;
+        padding: 1em 1em 0em;
     }
 
     .section_about_item {
-        padding: 1.6%;
+        padding: 1.6em;
 
         dt {
-            font-size: 1.3em;
-            font-family: "Roboto Slab", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
+            font-size: 1.5em;
+            font-family: "Roboto Slab", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", gulim, "굴림", sans-serif;
             font-weight: bold;
             text-transform: uppercase;
             background: url("../img/icon_html_32px.png") no-repeat center top;
-            padding-top: 1.8em;
-            padding-bottom: 1em;
+            padding-top: 1.5em;
+            padding-bottom: 0.7em;
             color: #30b4c5;
         }
 
         dd {
             margin-bottom: 2.5em;
             text-align: left;
+            font-size:1.1em;
         }
 
         em {
@@ -209,7 +228,7 @@ main {
 
         .ko {
             display: block;
-            padding-top: .5em;
+            margin-top: -10px;
             text-align: justify;
         }
     }
@@ -236,7 +255,6 @@ main {
 }
 
 .section_when {
-    min-height:100%;
 
     .inner {
         @extend %vertical_middle;
@@ -248,7 +266,7 @@ main {
     }
 
     .section_when_item {
-        font-size: 2em;
+        font-size: 2.3em;
     }
 }
 
@@ -273,17 +291,28 @@ main {
         padding-bottom: 1em;
         padding-left: 80px;
 
+        a {
+            display:block;
+        }
+
         .time {
             color: #797da2;
         }
 
         .subject {
-            font-size: 1.4em;
+            font-size: 1.2em;
+
+            .speakers {
+                display:block;
+                font-size:0.8em;
+                padding-top:5px;
+                color: #b4b7d4;
+            }
         }
 
         .icon {
             position: absolute;
-            top: 35%;
+            top: 15px;
             left: 0;
             width: 60px;
             height: 26px;
@@ -327,13 +356,12 @@ main {
             display: inline-block;
 
             .name {
-                font-size: 1.2em;
+                font-size: 1.5em;
                 color: #2CB2C4;
-                font-weight: bold;
             }
 
             .company {
-                font-size: 0.9em;
+                font-size: 1em;
             }
         }
     }
@@ -357,7 +385,6 @@ main {
 }
 
 .section_sponsors {
-    min-height:100%;
 
     .inner {
         @extend %vertical_middle;
@@ -382,10 +409,9 @@ main {
 }
 
 .section_location {
-    min-height:100%;
 
     .inner {
-        max-width:100%;
+        max-width:100% !important;
         @extend %vertical_middle;
     }
 
@@ -411,7 +437,6 @@ main {
 }
 
 .section_tickets {
-    min-height:100%;
 
     .inner {
         @extend %vertical_middle;
@@ -424,22 +449,28 @@ main {
     }
 
     .section_description_subject {
+        font-size:1.4em;
+
         span {
+            display:block;
+            margin-top:25px;
             text-decoration: underline;
-            font-size: 0.9em;
+            font-size: 0.8em;
+            color:#797da2;
         }
     }
 
     .section_tickets_bank {
-        font-size: 1.5em;
+        font-size: 1.4em;
         margin-bottom: 2em;
+        margin-top:1em;
     }
 
     .section_tickets_button {
         a {
             display: inline-block;
-            font-size: 2em;
-            width: 9em;
+            font-size: 1.8em;
+            width: 8em;
             height: 2em;
             border-radius: 1.2em;
             background-color: #E44F26;
@@ -504,28 +535,96 @@ main {
         margin-bottom: 4em;
     }
 
+    .section_description_subject {
+        font-size:1.2em;
+    }
+
+}
+
+.footer {
+    clear:both;
 }
 
 .remodal-wrapper {
+    padding:20px;
+    margin:20px auto 0;
+
     .remodal {
         text-align:left;
         border-radius: 10px;
+        padding:30px 26px;
+
+        a {
+            color: #E44F26;
+
+            &:link {
+                color: #E44F26;
+                text-decoration: underline;
+            }
+
+            &:hover {
+                color: #E44F26;
+
+            }
+
+            &:active {
+                color: #E44F26;
+            }
+        }
 
         h2 {
-            padding:0 15px 15px;
-            margin-bottom:15px;
+            padding-bottom:15px;
+            margin-bottom:30px;
             border-bottom:1px solid #e5e5e5;
-            font-size:1.5em;
+            font-size:2em;
+            font-weight:bold;
+            line-height:1.2;
+        }
+
+        p {
+            padding-bottom:10px;
+        }
+        li {
+            padding-left:5px;
         }
         .info {
-            text-align:right;
-        }
-        p {
-            margin-top:1em;
+            position:relative;
+            border-top:1px solid #e5e5e5;
+            margin-top:30px;
+            padding-top:20px;
+
+            h3 {
+                font-weight:bold;
+                font-size:1.5em;
+                margin-bottom:10px;
+
+                .company {
+                    display:block;
+                    font-size:0.7em;
+                }
+            }
+
+            .url {
+                position:absolute;
+                top:20px;
+                right:0;
+            }
+
+            .url img {
+                width:32px;
+            }
+
+            h4 {
+                font-weight:bold;
+                font-size:1.2em;
+                margin-top:20px;
+                margin-bottom:5px;
+            }
         }
         .remodal-close, .remodal-close:before {
             left:auto;
             right:0;
+            font-size:40px;
         }
     }
 }
