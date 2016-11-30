@@ -52,7 +52,7 @@ html, body {
 body {
   line-height: 1.5;
   font-size: 1em;
-  font-family: "Roboto Slab", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
+  font-family: "Roboto Slab", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", gulim, "굴림", sans-serif;
   text-align: center;
   color: #fff;
   background-color: #1E1F29;
@@ -117,21 +117,29 @@ em {
   width: 100%;
   height: 100%;
   background-color: #000;
-  opacity: 0.5;
+  opacity: 0.6;
   z-index: 1;
 }
 .header .header_title {
   margin: 0 auto;
   text-align: center;
-  font-family: "Bungee Inline", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
-  font-size: 6em;
+  font-family: "Bungee Inline", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", gulim, "굴림", sans-serif;
+  font-size: 4.5em;
 }
-.header .header_title img {
-  max-width: 100%;
+.header .header_title span {
+  font-size: .7em;
 }
 .header .header_title_desc {
-  font-family: "Bungee Outline", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
-  font-size: 4em;
+  font-family: "Bungee Outline", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", gulim, "굴림", sans-serif;
+  font-size: 2.6em;
+  margin-top: -20px;
+}
+.header .header_title_logo img {
+  width: 120px;
+}
+.header .header_subject {
+  font-size: 1.2em;
+  padding: 30px 36px 0;
 }
 
 main {
@@ -142,6 +150,7 @@ main {
   position: relative;
   clear: both;
   border-top: 1px solid #111;
+  min-height: 100%;
 }
 .section:nth-of-type(1) {
   border-top: none;
@@ -160,8 +169,8 @@ main {
 
 .section_title {
   padding: 120px 20px 0.6em;
-  font-size: 4.5em;
-  font-family: "Bungee", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
+  font-size: 3.5em;
+  font-family: "Bungee", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", gulim, "굴림", sans-serif;
   line-height: 1em;
 }
 .section_title:after {
@@ -178,40 +187,39 @@ main {
   padding: 0 20px 120px;
 }
 
-.section_description_subject {
-  font-size: 1.5em;
-  margin-bottom: 2em;
-}
-
 .section_about {
-  min-height: 100%;
+  min-height: auto;
 }
 .section_about .section_about_logo img {
   width: 50%;
+}
+.section_about .section_description {
+  padding: 50px 20px 50px;
 }
 .section_about .section_title span {
   font-size: 0.7em;
 }
 .section_about .section_description_subject {
   font-size: 1.2em;
-  padding: 2em 1em 0em;
+  padding: 1em 1em 0em;
 }
 .section_about .section_about_item {
-  padding: 1.6%;
+  padding: 1.6em;
 }
 .section_about .section_about_item dt {
-  font-size: 1.3em;
-  font-family: "Roboto Slab", "Apple SD Gothic Neo", gulim, "굴림", sans-serif;
+  font-size: 1.5em;
+  font-family: "Roboto Slab", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", gulim, "굴림", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   background: url("../img/icon_html_32px.png") no-repeat center top;
-  padding-top: 1.8em;
-  padding-bottom: 1em;
+  padding-top: 1.5em;
+  padding-bottom: 0.7em;
   color: #30b4c5;
 }
 .section_about .section_about_item dd {
   margin-bottom: 2.5em;
   text-align: left;
+  font-size: 1.1em;
 }
 .section_about .section_about_item em a {
   display: block;
@@ -225,7 +233,7 @@ main {
 }
 .section_about .section_about_item .ko {
   display: block;
-  padding-top: .5em;
+  margin-top: -10px;
   text-align: justify;
 }
 .section_about .section_about_css dt {
@@ -241,14 +249,11 @@ main {
   background-image: url("../img/icon_seo_32px.png");
 }
 
-.section_when {
-  min-height: 100%;
-}
 .section_when .section_title:after {
   background-color: #D02E28;
 }
 .section_when .section_when_item {
-  font-size: 2em;
+  font-size: 2.3em;
 }
 
 .section_schedule .section_title:after {
@@ -271,11 +276,17 @@ main {
   color: #797da2;
 }
 .section_schedule .section_schedule_timetable .subject {
-  font-size: 1.4em;
+  font-size: 1.2em;
+}
+.section_schedule .section_schedule_timetable .subject .speakers {
+  display: block;
+  font-size: 0.8em;
+  padding-top: 5px;
+  color: #b4b7d4;
 }
 .section_schedule .section_schedule_timetable .icon {
   position: absolute;
-  top: 35%;
+  top: 15px;
   left: 0;
   width: 60px;
   height: 26px;
@@ -305,12 +316,11 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
   display: inline-block;
 }
 .section_speakers .section_speakers_item .speakers .name {
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: #2CB2C4;
-  font-weight: bold;
 }
 .section_speakers .section_speakers_item .speakers .company {
-  font-size: 0.9em;
+  font-size: 1em;
 }
 .section_speakers .speakers_info_photo {
   position: relative;
@@ -328,9 +338,6 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
   transition: transform .3s, -webkit-transform .3s;
 }
 
-.section_sponsors {
-  min-height: 100%;
-}
 .section_sponsors .section_title:after {
   background-color: #694EA0;
 }
@@ -342,9 +349,6 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
   max-width: 100%;
 }
 
-.section_location {
-  min-height: 100%;
-}
 .section_location .inner {
   max-width: 100%;
 }
@@ -363,9 +367,6 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
   font-size: 1.2em;
 }
 
-.section_tickets {
-  min-height: 100%;
-}
 .section_tickets .section_title:after {
   background-color: #A83F62;
 }
@@ -374,13 +375,14 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
   font-size: 0.9em;
 }
 .section_tickets .section_tickets_bank {
-  font-size: 1.5em;
+  font-size: 1.4em;
   margin-bottom: 2em;
+  margin-top: 1em;
 }
 .section_tickets .section_tickets_button a {
   display: inline-block;
-  font-size: 2em;
-  width: 9em;
+  font-size: 1.8em;
+  width: 8em;
   height: 2em;
   border-radius: 1.2em;
   background-color: #E44F26;
@@ -432,9 +434,14 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
   margin-bottom: 4em;
 }
 
+.remodal-wrapper {
+  padding: 20px;
+  margin: 20px auto 0;
+}
 .remodal-wrapper .remodal {
   text-align: left;
   border-radius: 10px;
+  padding: 30px 26px;
 }
 .remodal-wrapper .remodal h2 {
   padding-bottom: 15px;
@@ -442,13 +449,13 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
   border-bottom: 1px solid #e5e5e5;
   font-size: 2em;
   font-weight: bold;
+  line-height: 1.2;
 }
 .remodal-wrapper .remodal p {
-  padding-left: 15px;
   padding-bottom: 10px;
 }
 .remodal-wrapper .remodal li {
-  padding-left: 15px;
+  padding-left: 5px;
 }
 .remodal-wrapper .remodal .info {
   position: relative;
@@ -460,6 +467,10 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 10px;
+}
+.remodal-wrapper .remodal .info h3 .company {
+  display: block;
+  font-size: 0.7em;
 }
 .remodal-wrapper .remodal .info .url {
   position: absolute;
@@ -473,13 +484,23 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
   font-weight: bold;
   font-size: 1.2em;
   margin-top: 20px;
+  margin-bottom: 5px;
 }
 .remodal-wrapper .remodal .remodal-close, .remodal-wrapper .remodal .remodal-close:before {
   left: auto;
   right: 0;
+  font-size: 40px;
 }
 
 @media (min-width: 480px) {
+  .header .header_title_logo img {
+    width: 200px;
+  }
+
+  .section_title {
+    font-size: 4.5em;
+  }
+
   .section_about .section_about_logo img {
     width: 30%;
   }
@@ -487,6 +508,10 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
     float: left;
     width: 42%;
     padding: 0 4%;
+  }
+
+  .section_when .section_when_item {
+    font-size: 3em;
   }
 
   .section_schedule .section_schedule_item {
@@ -498,8 +523,16 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
   }
 }
 @media (min-width: 768px) {
+  .header .header_title {
+    font-size: 6.5em;
+  }
+  .header .header_title_desc {
+    font-size: 3.8em;
+    margin-top: -40px;
+  }
+
   .section_title {
-    font-size: 6.5em !important;
+    font-size: 5.5em;
   }
 
   .section_about .section_about_logo img {
@@ -543,13 +576,6 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
   }
 }
 @media (max-width: 1023px) {
-  .header .header_title {
-    font-size: 3em;
-  }
-  .header .header_title_desc {
-    font-size: 2em;
-  }
-
   .section_about, .section_sponsors, .section_location, .section_tickets {
     height: auto;
     min-height: 0;
@@ -567,6 +593,29 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
 
   .section_tickets .section_tickets_caution {
     max-width: 60%;
+  }
+}
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  .header .header_title_logo {
+    float: left;
+    margin-left: 100px;
+    margin-right: -100px;
+    margin-top: 20px;
+  }
+  .header .header_title_logo img {
+    width: 120px;
+  }
+
+  .section_speakers .section_speakers_item li {
+    width: 27%;
+    padding: 0 2.5%;
+    margin-bottom: 5em;
+  }
+  .section_speakers .section_speakers_item .speakers .name {
+    font-size: 1.5em;
+  }
+  .section_speakers .section_speakers_item .speakers .company {
+    font-size: 1.2em;
   }
 }
 
