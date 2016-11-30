@@ -291,6 +291,10 @@ main {
         padding-bottom: 1em;
         padding-left: 80px;
 
+        a {
+            display:block;
+        }
+
         .time {
             color: #797da2;
         }
@@ -445,9 +449,14 @@ main {
     }
 
     .section_description_subject {
+        font-size:1.4em;
+
         span {
+            display:block;
+            margin-top:25px;
             text-decoration: underline;
-            font-size: 0.9em;
+            font-size: 0.8em;
+            color:#797da2;
         }
     }
 
@@ -524,6 +533,10 @@ main {
 .section_qna {
     .section_qna_item {
         margin-bottom: 4em;
+    }
+
+    .section_description_subject {
+        font-size:1.2em;
     }
 
 }

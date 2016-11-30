@@ -52,6 +52,9 @@
             font-size:3.8em;
             margin-top:-40px;
         }
+        .header_subject {
+            font-size:1.5em;
+        }
     }
     .section_title {
         font-size: 5.5em;
@@ -85,6 +88,11 @@
         .section_schedule_item {
             width: 80%;
         }
+        .section_schedule_timetable {
+            .subject {
+                font-size:1.5em;
+            }
+        }
     }
 
     .section_speakers {
@@ -109,7 +117,20 @@
         .section_tickets_caution {
             max-width: 75%;
         }
+
+        .section_description_subject {
+            font-size:1.8em;
+        }
     }
+
+    .section_qna {
+
+        .section_description_subject {
+            font-size:1.6em;
+        }
+
+    }
+
 }
 @media (min-width: 992px) {
     .section_tickets {
@@ -151,7 +172,22 @@
 
     .section_schedule {
         .section_schedule_item {
-            width: 70%;
+            width: 75%;
+        }
+
+        .section_schedule_timetable {
+            position:relative;
+
+            .subject {
+                font-size:1.8em;
+
+                .speakers {
+                    position:absolute;
+                    top:10px;
+                    right:0;
+                    font-size:0.6em;
+                }
+            }
         }
     }
 

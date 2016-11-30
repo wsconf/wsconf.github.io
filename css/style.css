@@ -272,6 +272,9 @@ main {
   padding-bottom: 1em;
   padding-left: 80px;
 }
+.section_schedule .section_schedule_timetable a {
+  display: block;
+}
 .section_schedule .section_schedule_timetable .time {
   color: #797da2;
 }
@@ -370,9 +373,15 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
 .section_tickets .section_title:after {
   background-color: #A83F62;
 }
+.section_tickets .section_description_subject {
+  font-size: 1.4em;
+}
 .section_tickets .section_description_subject span {
+  display: block;
+  margin-top: 25px;
   text-decoration: underline;
-  font-size: 0.9em;
+  font-size: 0.8em;
+  color: #797da2;
 }
 .section_tickets .section_tickets_bank {
   font-size: 1.4em;
@@ -432,6 +441,9 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
 
 .section_qna .section_qna_item {
   margin-bottom: 4em;
+}
+.section_qna .section_description_subject {
+  font-size: 1.2em;
 }
 
 .remodal-wrapper {
@@ -530,6 +542,9 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
     font-size: 3.8em;
     margin-top: -40px;
   }
+  .header .header_subject {
+    font-size: 1.5em;
+  }
 
   .section_title {
     font-size: 5.5em;
@@ -553,6 +568,9 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
   .section_schedule .section_schedule_item {
     width: 80%;
   }
+  .section_schedule .section_schedule_timetable .subject {
+    font-size: 1.5em;
+  }
 
   .section_speakers .section_speakers_item li {
     width: 27%;
@@ -568,6 +586,13 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
 
   .section_tickets .section_tickets_caution {
     max-width: 75%;
+  }
+  .section_tickets .section_description_subject {
+    font-size: 1.8em;
+  }
+
+  .section_qna .section_description_subject {
+    font-size: 1.6em;
   }
 }
 @media (min-width: 992px) {
@@ -588,7 +613,19 @@ html.no-touch .section_speakers .section_speakers_item li:hover img {
 }
 @media (min-width: 1200px) {
   .section_schedule .section_schedule_item {
-    width: 70%;
+    width: 75%;
+  }
+  .section_schedule .section_schedule_timetable {
+    position: relative;
+  }
+  .section_schedule .section_schedule_timetable .subject {
+    font-size: 1.8em;
+  }
+  .section_schedule .section_schedule_timetable .subject .speakers {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 0.6em;
   }
 
   .section_tickets .section_tickets_caution {
