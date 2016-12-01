@@ -12,6 +12,36 @@ body {
     text-align: center;
     color: #fff;
     background-color: #1E1F29;
+    -webkit-transition:background-color 0.5s ease-in-out;
+    transition:background-color 0.5s ease-in-out;
+
+    &.when {
+        background-color:#D02E28;
+    }
+
+    &.schedule {
+        background-color:#F99D21;
+    }
+
+    &.speakers {
+        background-color:#2CB2C4;
+    }
+
+    &.sponsors {
+        background-color:#48356D;
+    }
+
+    &.location {
+        background-color:#E44F26;
+    }
+
+    &.tickets {
+        background-color:#A83F62;
+    }
+
+    &.qna {
+        background-color:#1E1F29;
+    }
 }
 
 a {
@@ -171,7 +201,10 @@ main {
 }
 
 .section_about {
-    min-height:auto !important;
+    background-color:#1E1F29;
+    main & {
+        min-height:auto;
+    }
 
     .section_about_logo {
         img {
@@ -261,7 +294,7 @@ main {
     }
     .section_title {
         &:after {
-            background-color: #D02E28;
+            background-color: #9D231E;
         }
     }
 
@@ -273,7 +306,7 @@ main {
 .section_schedule {
     .section_title {
         &:after {
-            background-color: #F99D21;
+            background-color: #C67D1A;
         }
     }
 
@@ -296,7 +329,7 @@ main {
         }
 
         .time {
-            color: #797da2;
+            color: #794D10;
         }
 
         .subject {
@@ -306,7 +339,7 @@ main {
                 display:block;
                 font-size:0.8em;
                 padding-top:5px;
-                color: #b4b7d4;
+                color: #794D10;
             }
         }
 
@@ -316,8 +349,8 @@ main {
             left: 0;
             width: 60px;
             height: 26px;
-            background-color: #797da2;
-            color: #000;
+            background-color: #C67D1A;
+            color: #794D10;
             text-align: center;
             border-radius: 13px;
         }
@@ -325,7 +358,7 @@ main {
 
     .section_schedule_timetable.breaktime {
         .subject {
-            color: #797da2;
+            color: #794D10;
         }
     }
 }
@@ -333,7 +366,7 @@ main {
 .section_speakers {
     .section_title {
         &:after {
-            background-color: #2CB2C4;
+            background-color: #218491;
         }
     }
 
@@ -353,11 +386,11 @@ main {
         }
 
         .speakers {
-            display: inline-block;
+            // display: inline-block;
 
             .name {
                 font-size: 1.5em;
-                color: #2CB2C4;
+                color: #0F3E44;
             }
 
             .company {
@@ -392,7 +425,7 @@ main {
 
     .section_title {
         &:after {
-            background-color: #694EA0;
+            background-color: #261C3A;
         }
     }
 
@@ -417,7 +450,7 @@ main {
 
     .section_title {
         &:after {
-            background-color: #E44F26;
+            background-color: #B23D1E;
         }
     }
 
@@ -444,7 +477,7 @@ main {
 
     .section_title {
         &:after {
-            background-color: #A83F62;
+            background-color: #782C45;
         }
     }
 
@@ -456,7 +489,11 @@ main {
             margin-top:25px;
             text-decoration: underline;
             font-size: 0.8em;
-            color:#797da2;
+            color:#F7A5C0;
+        }
+
+        strong {
+            color:#F7A5C0;
         }
     }
 
@@ -500,10 +537,14 @@ main {
         margin: 4em auto 2em;
         text-align: left;
 
+        strong {
+            color:#F7A5C0;
+        }
+
         dt {
             font-size: 1.5em;
             font-weight: bold;
-            border-bottom: 1px solid #3a3c4f;
+            border-bottom: 1px solid #782C45;
             margin-bottom: 1em;
             padding-bottom: .2em;
         }
@@ -521,8 +562,8 @@ main {
                 width: 8px;
                 height: 8px;
                 margin-right: 10px;
-                border-top: 3px solid #E44F26;
-                border-right: 3px solid #E44F26;
+                border-top: 3px solid #782C45;
+                border-right: 3px solid #782C45;
                 -webkit-transform: rotate(45deg);
                 transform: rotate(45deg);
             }
