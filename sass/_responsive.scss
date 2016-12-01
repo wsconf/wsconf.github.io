@@ -113,6 +113,23 @@
         }
     }
 
+    .section_sponsors {
+        .section_sponsors_item {
+
+            li {
+                margin:0 30px;
+
+                img {
+                    max-width: 25%;
+                }
+            }
+
+            li.kwag {
+                display:inline;
+            }
+        }
+    }
+
     .section_tickets {
         .section_tickets_caution {
             max-width: 75%;

@@ -14,34 +14,6 @@ body {
     background-color: #1E1F29;
     -webkit-transition:background-color 0.5s ease-in-out;
     transition:background-color 0.5s ease-in-out;
-
-    &.when {
-        background-color:#D02E28;
-    }
-
-    &.schedule {
-        background-color:#F99D21;
-    }
-
-    &.speakers {
-        background-color:#2CB2C4;
-    }
-
-    &.sponsors {
-        background-color:#48356D;
-    }
-
-    &.location {
-        background-color:#E44F26;
-    }
-
-    &.tickets {
-        background-color:#A83F62;
-    }
-
-    &.qna {
-        background-color:#1E1F29;
-    }
 }
 
 a {
@@ -152,7 +124,6 @@ main {
     .section {
         position:relative;
         clear: both;
-        border-top: 1px solid #111;
         min-height:100%;
 
         &:nth-of-type(1) {
@@ -313,52 +284,62 @@ main {
     .section_schedule_item {
         width: 100%;
         margin: 0 auto;
-        border-top: 1px solid #3a3c4f;
+
     }
 
     .section_schedule_timetable {
         position: relative;
         text-align: left;
-        border-bottom: 1px solid #3a3c4f;
-        padding-top: 1em;
-        padding-bottom: 1em;
-        padding-left: 80px;
 
-        a {
+        &:before {
+            content:'';
             display:block;
+            width:100%;
+            height:1px;
+            background-color:#fff;
+            opacity:0.2;
         }
 
-        .time {
-            color: #794D10;
-        }
+        .area {
+            position:relative;
+            display:block;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            padding-left: 80px;
 
-        .subject {
-            font-size: 1.2em;
-
-            .speakers {
-                display:block;
-                font-size:0.8em;
-                padding-top:5px;
-                color: #794D10;
+            .time {
+                color: #8088c4;
             }
-        }
 
-        .icon {
-            position: absolute;
-            top: 15px;
-            left: 0;
-            width: 60px;
-            height: 26px;
-            background-color: #C67D1A;
-            color: #794D10;
-            text-align: center;
-            border-radius: 13px;
+            .subject {
+                font-size: 1.2em;
+
+                .speakers {
+                    display:block;
+                    font-size:0.8em;
+                    padding-top:5px;
+                    color: #8088c4;
+                }
+            }
+
+            .icon {
+                position: absolute;
+                top: 15px;
+                left: 0;
+                width: 60px;
+                height: 26px;
+                background-color: #8088c4;
+                color: #000;
+                text-align: center;
+                border-radius: 13px;
+            }
+
         }
     }
 
     .section_schedule_timetable.breaktime {
         .subject {
-            color: #794D10;
+            color: #8088c4;
         }
     }
 }
@@ -366,7 +347,7 @@ main {
 .section_speakers {
     .section_title {
         &:after {
-            background-color: #218491;
+            background-color: #261C3A;
         }
     }
 
@@ -390,11 +371,11 @@ main {
 
             .name {
                 font-size: 1.5em;
-                color: #0F3E44;
             }
 
             .company {
                 font-size: 1em;
+                color:#083a40;
             }
         }
     }
@@ -425,18 +406,29 @@ main {
 
     .section_title {
         &:after {
-            background-color: #261C3A;
+            background-color: #218491;
         }
     }
 
+    h2 {
+        font-size:2em;
+        margin-top:2em;
+    }
+
     .section_sponsors_item {
+
         li {
-            display: inline-block;
-            padding: 1em 3em;
+            display: inline;
+            margin:0 15px;
 
             img {
-                max-width: 100%;
+                max-width: 40%;
             }
+        }
+
+        li.kwag {
+            display:block;
+            margin-bottom:30px;
         }
     }
 }
@@ -450,7 +442,7 @@ main {
 
     .section_title {
         &:after {
-            background-color: #B23D1E;
+            background-color: #77d638;
         }
     }
 
@@ -489,11 +481,6 @@ main {
             margin-top:25px;
             text-decoration: underline;
             font-size: 0.8em;
-            color:#F7A5C0;
-        }
-
-        strong {
-            color:#F7A5C0;
         }
     }
 
@@ -537,14 +524,10 @@ main {
         margin: 4em auto 2em;
         text-align: left;
 
-        strong {
-            color:#F7A5C0;
-        }
-
         dt {
             font-size: 1.5em;
             font-weight: bold;
-            border-bottom: 1px solid #782C45;
+            border-bottom: 1px solid #fff;
             margin-bottom: 1em;
             padding-bottom: .2em;
         }
@@ -562,8 +545,8 @@ main {
                 width: 8px;
                 height: 8px;
                 margin-right: 10px;
-                border-top: 3px solid #782C45;
-                border-right: 3px solid #782C45;
+                border-top: 3px solid #E44F26;
+                border-right: 3px solid #E44F26;
                 -webkit-transform: rotate(45deg);
                 transform: rotate(45deg);
             }
@@ -667,5 +650,129 @@ main {
             right:0;
             font-size:40px;
         }
+    }
+}
+
+body {
+
+    &.when {
+        background-color:#4b3767;
+    }
+
+    &.schedule {
+        background-color:#2e377a;
+    }
+
+    &.speakers {
+        background-color:#077583;
+
+        .section_schedule {
+
+            .section_schedule_timetable {
+
+                &:before {
+                    opacity:0.2;
+                }
+
+                .area {
+
+                    .time {
+                        color: #98d5dd;
+                    }
+
+                    .subject {
+
+                        .speakers {
+                            color: #98d5dd;
+                        }
+                    }
+
+                    .icon {
+                        background-color: #98d5dd;
+                        color: #000;
+                    }
+
+                }
+            }
+
+            .section_schedule_timetable.breaktime {
+                .subject {
+                    color: #98d5dd;
+                }
+            }
+        }
+
+    }
+
+    &.sponsors {
+        background-color:#48356D;
+
+        .section_speakers {
+
+            .section_speakers_item {
+
+                .speakers {
+
+                    .company {
+                        color:#a28dcd;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    &.location {
+        background-color:#E44F26;
+
+        .section_tickets {
+
+            strong {
+                color:#000;
+            }
+
+            .section_tickets_button {
+                a {
+                    background-color: #000;
+
+                    &:hover {
+                        color:#fff;
+                    }
+                }
+            }
+
+            .section_tickets_button.soldout {
+                a {
+                    background-color: #eee;
+                    color: #000;
+                }
+            }
+
+            .section_tickets_caution {
+
+                dt {
+                    border-bottom: 1px solid #fff;
+                }
+
+                i {
+                    &:after {
+                        border-top: 3px solid #000;
+                        border-right: 3px solid #000;
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+    &.tickets {
+        background-color:#1E1F29;
+    }
+
+    &.qna {
+        background-color:#000;
     }
 }
