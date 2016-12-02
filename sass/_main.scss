@@ -14,6 +14,11 @@ body {
     background-color: #1E1F29;
     -webkit-transition:background-color 0.5s ease-in-out;
     transition:background-color 0.5s ease-in-out;
+    overflow-x:hidden;
+}
+
+img {
+    vertical-align:middle;
 }
 
 a {
@@ -95,6 +100,7 @@ em {
 
         span {
             font-size:.7em;
+            vertical-align:baseline;
         }
         // img {
         //     max-width: 100%;
