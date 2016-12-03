@@ -344,8 +344,10 @@ main {
     }
 
     .section_schedule_timetable.breaktime {
-        .subject {
-            color: #8088c4;
+        div.area {
+            .subject {
+                color: #8088c4;
+            }
         }
     }
 }
@@ -617,6 +619,17 @@ main {
         li {
             padding-left:5px;
         }
+        .lunch {
+            text-align:center;
+
+            figure {
+                display:inline-block;
+            }
+            img {
+                display:inline-block;
+                width:200px;
+            }
+        }
         .info {
             position:relative;
             border-top:1px solid #e5e5e5;
@@ -631,6 +644,12 @@ main {
                 .company {
                     display:block;
                     font-size:0.7em;
+                }
+            }
+
+            .place {
+                img {
+                    max-width:100%;
                 }
             }
 
