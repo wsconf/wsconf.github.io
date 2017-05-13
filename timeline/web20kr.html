@@ -48,11 +48,11 @@
     <script src="jquery.youtubebackground.js"></script>
     <script>
     $(document).ready(function() {
-        $('#video').YTPlayer({
-            fitToBackground: true,
-            videoId: '8_S7IK_CIPs',
-            mute: false
-        });
+//        $('#video').YTPlayer({
+//           fitToBackground: true,
+//           videoId: '8_S7IK_CIPs',
+//           mute: false
+//        });
 
         createStoryJS({
             type: 'timeline',
@@ -112,10 +112,10 @@
                     if (!this.isTouchDevice()) {
                         $(document)
                             .on('mouseover', '#web20kr', function() {
-                                this.stop();
+//                                this.stop();
                             }.bind(this))
                             .on('mouseout', '#web20kr', function() {
-                                this.start();
+//                                this.start();
                             }.bind(this));
                     }
                 }
