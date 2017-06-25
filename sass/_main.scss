@@ -96,9 +96,9 @@ em {
             font-size: .7em;
             vertical-align: baseline;
         }
-        // img {
-        //     max-width: 100%;
-        // }
+        abbr {
+            text-decoration: none;
+        }
     }
     .header_title_desc {
         font-family: "Bungee Outline", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", gulim, "굴림", sans-serif;
@@ -288,6 +288,11 @@ main {
                     font-size: 0.8em;
                     padding-top: 5px;
                     color: #8088c4;
+                }
+                span {
+                    font-size:12px;
+                    margin-left:5px;
+                    margin-right:10px;
                 }
             }
             .icon {
