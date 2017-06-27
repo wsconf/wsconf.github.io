@@ -51,4 +51,6 @@ $(function() {
     }());
 
     changeColor.init();
+
+    $.getScript("https://cdn.rawgit.com/mikeflynn/egg.js/master/egg.min.js",function(){var t=new Egg;t.addCode("l, o, v, e",function(){var t=$(".speakers_info").eq(1),n=t.find("img").attr("src");t.find("img").hide(0,function(){$(this).parent().next().hide(),$(this).attr("src","img/heart.svg")}).fadeIn(500,function(){setTimeout(function(){t.find("img").hide(0,function(){$(this).parent().next().show(),$(this).attr("src",n)}).fadeIn()},3e3)})}).listen()});
 });
